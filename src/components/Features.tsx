@@ -1,52 +1,73 @@
-import Image from "next/image";
+import { BarChart3, BellRing, FileSearch, Globe, Link2, ListChecks, MousePointerClick, Sparkles, Target } from "lucide-react";
+
+const features = [
+    {
+        icon: <Globe className="w-5 h-5 text-white/60" />,
+        title: "User-friendly dashboard",
+        description: "Perform complex SEO audits and optimizations with a single click.",
+    },
+    {
+        icon: <BarChart3 className="w-5 h-5 text-white/60" />,
+        title: "Visual reports",
+        description: "Visual insights into your site's performance.",
+    },
+    {
+        icon: <Sparkles className="w-5 h-5 text-white/60" />,
+        title: "Smart Keyword Generator",
+        description: "Automatic suggestions and the best keywords to target.",
+    },
+    {
+        icon: <FileSearch className="w-5 h-5 text-white/60" />,
+        title: "Content evaluation",
+        description: "Simple corrections for immediate improvements.",
+    },
+    {
+        icon: <Target className="w-5 h-5 text-white/60" />,
+        title: "SEO goal setting",
+        description: "Helps you set and achieve SEO goals with guided assistance.",
+    },
+    {
+        icon: <BellRing className="w-5 h-5 text-white/60" />,
+        title: "Automated alerts",
+        description: "Automatic notifications about your SEO health, including quick fixes.",
+    },
+    {
+        icon: <Link2 className="w-5 h-5 text-white/60" />,
+        title: "Link Optimization Wizard",
+        description: "Guides you through the process of creating and managing links.",
+    },
+    {
+        icon: <MousePointerClick className="w-5 h-5 text-white/60" />,
+        title: "One-click optimization",
+        description: "Perform complex SEO audits and optimizations with a single click.",
+    },
+    {
+        icon: <ListChecks className="w-5 h-5 text-white/60" />,
+        title: "Competitor reports",
+        description: "Provides insights into competitors' keyword strategies and ranking.",
+    },
+];
 
 export default function Features() {
     return (
-        <section className="py-20">
-            <div className="flex flex-col items-center gap-10">
-                <h1 className="text-xl max-w-xs text-center">Harness the power of AI, making search engine optimization intuitive and effective for all skill levels.</h1>
-                <div className="flex flex-col gap-4 w-full max-w-5xl">
-                    {/* Row 1 — 1:2 split */}
-                    <div className="grid grid-cols-3 gap-4">
-                        <div className="bg-black border border-white/15 rounded-2xl p-6 min-h-[340px] flex flex-col gap-4">
-                            <div className="flex-1 flex items-center justify-center">
-                                <Image src="/assets/Visual-top.svg" alt="visual-top" width={300} height={300} />
+        <section
+            className="py-20 px-10"
+            style={{ background: "linear-gradient(to right, #190D2E, #020103)" }}
+        >
+            <div className="max-w-5xl mx-auto">
+                <h2 className="text-4xl md:text-5xl font-medium tracking-tight leading-tight mb-16">
+                    Elevate your <br /> SEO efforts.
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-10">
+                    {features.map((feature, index) => (
+                        <div key={index} className="space-y-3">
+                            <div className="flex items-center gap-2">
+                                {feature.icon}
+                                <h3 className="text-white font-medium">{feature.title}</h3>
                             </div>
-                            <div className="space-y-2">
-                                <h1>SEO goal setting</h1>
-                                <p className="text-white/60 text-sm max-w-[220px]">Helps you set and achieve SEO goals with guided assistance.</p>
-                            </div>
+                            <p className="text-white/50 text-sm leading-relaxed">{feature.description}</p>
                         </div>
-                        <div className="col-span-2 bg-gradient-to-b from-black to-[#371866] rounded-2xl p-6 min-h-[340px] flex flex-col justify-end relative">
-                            <Image src="/assets/top-right.png" alt="top-right" width={590} height={400} className="absolute right-0 bottom-0 mask-b-from-0% to-30%"/>
-                            {/* User-friendly dashboard */}
-                            <div className="space-y-2">
-                                <h1>User-friendly dashboard</h1>
-                                <p className="text-white/60 text-sm max-w-[420px]">Perform complex SEO audits and optimizations with a single click.</p>
-                            </div>
-                        </div>
-                    </div>
-                    {/* Row 2 — 3:2 split */}
-                    <div className="grid grid-cols-5 gap-4">
-                        <div className="col-span-3 bg-gradient-to-b from-black to-[#371866] rounded-2xl p-6 min-h-[340px] flex flex-col justify-end">
-                            <Image src="/assets/bottom-left.png" alt="bottom-left" width={500} height={400} className="m-auto translate-y-10 mask-b-from-0% to-25%"/>
-                            {/* Visual reports */}
-                            <div className="space-y-2">
-                                <h1>Visual reports</h1>
-                                <p className="text-white/60 text-sm">Visual insights into your site’s performance.</p>
-                            </div>
-                        </div>
-                        <div className="col-span-2 bg-black border border-white/15 rounded-2xl p-6 min-h-[340px] flex flex-col gap-4">
-                            <div className="flex-1 flex items-center justify-center">
-                                <Image src="/assets/Visual-bottom.svg" alt="visual-bottom" width={300} height={300} />
-                            </div>
-                            {/* Smart Keyword Generator */}
-                            <div className="space-y-2">
-                                <h1>Smart Keyword Generator</h1>
-                                <p className="text-white/60 text-sm max-w-[180px]">Automatic suggestions and the best keywords to target.</p>
-                            </div>
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </div>
         </section>

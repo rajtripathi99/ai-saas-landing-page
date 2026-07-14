@@ -1,3 +1,4 @@
+import Bento from "@/components/Bento";
 import Features from "@/components/Features";
 import Hero from "@/components/Hero";
 import LogoTicker from "@/components/LogoTicker";
@@ -9,6 +10,7 @@ export default function Page() {
       <Navbar />
       <Hero />
       <LogoTicker />
+      <Bento />
       <Features />
     </>
   );
