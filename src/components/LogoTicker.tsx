@@ -2,7 +2,7 @@ import LogoBox from "./LogoBox";
 
 export default function LogoTicker() {
     return (
-        <section className="container px-28 pb-14 flex flex-col items-center gap-5">
+        <section className="container px-28 pb-18 flex flex-col items-center gap-5">
             <span className="text-white/60 ">Trusted by the world’s most innovative teams</span>
             <div></div>
             <div className="flex items-center gap-4">
