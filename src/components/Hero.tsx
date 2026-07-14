@@ -16,7 +16,7 @@ export default function Hero() {
                     <Image src="/assets/circles-bg.svg" alt="bg-img" className="object-fill pt-56 [mask-image:linear-gradient(to_top,transparent_20%,black_90%)]" fill priority />
                 </div>
             </div>
-            <Image src="/assets/app.png" alt="dashboard-img" className="pointer-events-none -mt-10 [mask-image:linear-gradient(to_bottom,black_30%,transparent_70%)]" width="1120" height="815" draggable={false} loading="lazy" />
+            <Image src="/assets/app.png" alt="dashboard-img" className="pointer-events-none -mt-10 -mb-42 [mask-image:linear-gradient(to_bottom,black_20%,transparent_70%)]" width="1120" height="815" draggable={false} loading="lazy" />
         </section>
     );
 }
