@@ -51,14 +51,14 @@ const features = [
 export default function Features() {
     return (
         <section
-            className="py-20 px-10"
+            className="py-16 md:py-20 px-4 md:px-10"
             style={{ background: "linear-gradient(to right, #190D2E, #020103)" }}
         >
             <div className="max-w-5xl mx-auto">
-                <h2 className="text-4xl md:text-5xl font-medium tracking-tight leading-tight mb-16">
+                <h2 className="text-3xl md:text-5xl font-medium tracking-tight leading-tight mb-12 md:mb-16">
                     Elevate your <br /> SEO efforts.
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-12 gap-y-10">
                     {features.map((feature, index) => (
                         <div key={index} className="space-y-3">
                             <div className="flex items-center gap-2">
