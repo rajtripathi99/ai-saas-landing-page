@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Bento() {
     return (
-        <section className="py-20 px-4 md:px-0">
+        <section className="pt-10 md:pt-20 pb-20 px-4 md:px-0">
             <div className="flex flex-col items-center gap-10">
                 <h1 className="text-xl max-w-xs text-center">Harness the power of AI, making search engine optimization intuitive and effective for all skill levels.</h1>
                 <div className="flex flex-col gap-4 w-full max-w-5xl">
@@ -18,7 +18,7 @@ export default function Bento() {
                             </div>
                         </div>
                         <div className="md:col-span-2 bg-gradient-to-b from-black to-[#371866] rounded-2xl p-6 min-h-[280px] md:min-h-[340px] flex flex-col justify-end relative overflow-hidden">
-                            <Image src="/assets/top-right.png" alt="top-right" width={590} height={400} className="absolute right-0 bottom-0 mask-b-from-0% to-30%"/>
+                            <Image src="/assets/top-right.png" alt="top-right" width={590} height={400} className="absolute right-0 bottom-10 md:bottom-0 mask-b-from-0% to-30% max-w-[340px] md:max-w-none"/>
                             {/* User-friendly dashboard */}
                             <div className="space-y-2">
                                 <h1>User-friendly dashboard</h1>
